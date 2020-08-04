@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Test page</title>
+  </head>
+
+  <body>
+    <script>
+      window.hackium = {};
+    </script>
+    <script src="../src/injection.js"></script>
+    <script>
+      Function.prototype.toString = function () {
+        return 'Function.prototype.toString overridden';
+      };
+      JSON.stringify = function () {
+        return 'JSON.stringify overridden';
+      };
+    </script>
+  </body>
+</html>

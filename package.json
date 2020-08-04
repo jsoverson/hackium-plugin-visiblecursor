@@ -1,0 +1,38 @@
+{
+  "name": "hackium-plugin-visiblecursor",
+  "version": "1.0.0",
+  "description": "Hackium plugin to show the cursor coordinates on the page.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc --declaration",
+    "clean": "rimraf dist",
+    "precompile": "npm run clean && mkdir dist",
+    "prewatch": "npm run compile",
+    "prepublishOnly": "npm run compile",
+    "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "watch": "tsc -w",
+    "test": "mocha --exit"
+  },
+  "keywords": [
+    "hackium-plugin",
+    "visible mouse",
+    "visible cursor"
+  ],
+  "author": "Jarrod Overson <jsoverson@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@jsoverson/test-server": "^1.2.0",
+    "@types/chai": "^4.2.12",
+    "@types/find-root": "^1.1.1",
+    "@types/mocha": "^8.0.1",
+    "@types/node": "^14.0.27",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "find-root": "^1.1.0"
+  }
+}
